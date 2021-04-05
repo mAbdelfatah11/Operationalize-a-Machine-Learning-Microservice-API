@@ -8,7 +8,7 @@
 setup:
 	# Create python virtualenv & source it
 	# source ~/.devops/bin/activate
-	python3 -m venv ~/.devops
+	python3 -m venv ~/.devops-proj4
 
 install:
 	# This should be run from inside a virtualenv
@@ -26,7 +26,7 @@ lint:
 	hadolint Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
-	pylint --disable=R,C,W1203,W1309 app.py
+	pylint --disable=R,C,W1203 app.py
 
 run:
 	python app.py

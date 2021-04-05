@@ -12,4 +12,4 @@ docker images
 
 # Step 3: 
 # Run flask app
-docker run --name proj4-ml-microservice --rm -it -p 8000:80 proj4-ml-microservice
+docker run -p 8000:80 proj4-ml-microservice

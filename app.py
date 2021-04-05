@@ -2,9 +2,8 @@ from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
 
-import os
 import pandas as pd
-from sklearn.externals import joblib
+import joblib
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
@@ -21,8 +20,7 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    Home ='Home'
-    html = f"<h3>Sklearn Prediction {Home}</h3>"
+    html = "<h3>Sklearn Prediction Home</h3>"
     return html.format(format)
 
 @app.route("/predict", methods=['POST'])
@@ -65,10 +63,9 @@ def predict():
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
     # TO DO:  Log the output prediction value
-    LOG.info(f"Predicted values: \n{prediction}")
     return jsonify({'prediction': prediction})
+
 if __name__ == "__main__":
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    fullpath = os.path.join(dir_path, "/model_data/boston_housing_prediction.joblib")
-    clf = joblib.load(fullpath) 
+    # load pretrained model as clf
+    clf = joblib.load("./model_data/boston_housing_prediction.joblib")
     app.run(host='0.0.0.0', port=80, debug=True) # specify port=80
