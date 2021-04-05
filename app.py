@@ -65,11 +65,10 @@ def predict():
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
     # TO DO:  Log the output prediction value
+    LOG.info(f"Predicted values: \n{prediction}")
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
-    # load pretrained model as clf
-    import os
     dir_path = os.path.dirname(os.path.realpath(__file__))
     fullpath = os.path.join(dir_path, "./model_data/boston_housing_prediction.joblib")
     clf = joblib.load(fullpath) 
