@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
 
+import os
 import pandas as pd
 from sklearn.externals import joblib
 from sklearn.preprocessing import StandardScaler
@@ -20,7 +21,8 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = f"<h3>Sklearn Prediction Home</h3>"
+    Home ='Home'
+    html = f"<h3>Sklearn Prediction {Home}</h3>"
     return html.format(format)
 
 @app.route("/predict", methods=['POST'])
@@ -67,5 +69,8 @@ def predict():
 
 if __name__ == "__main__":
     # load pretrained model as clf
-    clf = joblib.load("./model_data/boston_housing_prediction.joblib")
+    import os
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    fullpath = os.path.join(dir_path, "./model_data/boston_housing_prediction.joblib")
+    clf = joblib.load(fullpath) 
     app.run(host='0.0.0.0', port=80, debug=True) # specify port=80
