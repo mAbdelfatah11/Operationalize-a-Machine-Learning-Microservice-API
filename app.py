@@ -67,9 +67,8 @@ def predict():
     # TO DO:  Log the output prediction value
     LOG.info(f"Predicted values: \n{prediction}")
     return jsonify({'prediction': prediction})
-
 if __name__ == "__main__":
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    fullpath = os.path.join(dir_path, "./model_data/boston_housing_prediction.joblib")
+    fullpath = os.path.join(dir_path, "/model_data/boston_housing_prediction.joblib")
     clf = joblib.load(fullpath) 
     app.run(host='0.0.0.0', port=80, debug=True) # specify port=80
