@@ -1,4 +1,4 @@
-
+[![CircleCI](https://circleci.com/gh/circleci/proj4-ml-microservice.svg?style=svg)](https://app.circleci.com/pipelines/github/mAbdelFattah99/proj4-ml-microservice)
 
 ## Project Overview
 
