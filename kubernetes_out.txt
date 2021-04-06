@@ -1,0 +1,7 @@
+NAME                    READY   STATUS    RESTARTS   AGE
+proj4-ml-microservice   1/1     Running   0          3m33s
+Sleeping for 10 seconds while waiting for pod to come up.
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000

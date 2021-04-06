@@ -5,14 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="nawfaltachfine/ml-microservice"
-version="1.0"
+dockerpath="proj4mlmicroservice/proj4-ml-microservice"
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker tag proj4-ml-microservice $dockerpath:$version
+docker login
+docker tag proj4-ml-microservice:latest proj4mlmicroservice/proj4-ml-microservice:latest
 
 # Step 3:
 # Push image to a docker repository
-docker push $dockerpath:$version
+docker push proj4mlmicroservice/proj4-ml-microservice:latest
