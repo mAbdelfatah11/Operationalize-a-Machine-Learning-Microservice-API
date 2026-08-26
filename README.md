@@ -1,5 +1,5 @@
 
-## Project 4: Operationalizing a Machine Learning Microservice API
+## Operationalizing a Machine Learning Microservice API
 
 [![mAbdelFattah99](https://circleci.com/gh/mAbdelFattah99/proj4-ml-microservice.svg?style=svg)](https://app.circleci.com/pipelines/github/mAbdelFattah99/proj4-ml-microservice)
 
