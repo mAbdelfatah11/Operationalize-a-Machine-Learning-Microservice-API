@@ -6,9 +6,8 @@
 
 ## Project Overview
 
-In this project, you will apply the skills learned in containers and Kubernetes orchestration to run the Machine Learning Microservice API.
+This project demonstrates the operationalization of a Machine Learning Microservice API using Kubernetes. The core application is a Python Flask web application (`app.py`) that serves inference predictions about housing prices through API calls. It utilizes a pre-trained `sklearn` machine learning model trained on Kaggle data to predict Boston housing prices based on features like average rooms, teacher-to-pupil ratios, and highway access.
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
 ### Project Tasks
 
